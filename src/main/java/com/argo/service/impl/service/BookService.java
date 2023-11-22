@@ -30,7 +30,7 @@ public interface BookService {
      * @param id
      * @return
      */
-    public boolean getById(Integer id);
+    public Book getById(Integer id);
 
     /**
      *
