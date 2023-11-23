@@ -21,12 +21,13 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public boolean delete(Integer id) {
-        return false;
+        return bookMapper.delete(id);
     }
 
     @Override
-    public void update(Book book) {
+    public boolean update(Book book) {
 
+        return bookMapper.update(book);
     }
 
     @Override
@@ -36,6 +37,6 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<Book> getAll() {
-        return null;
+        return bookMapper.getAll();
     }
 }

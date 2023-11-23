@@ -1,9 +1,12 @@
 package com.argo.service.impl.service;
 
 import com.argo.domain.Book;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+
+@Transactional
 public interface BookService {
     /**
      *
@@ -20,10 +23,10 @@ public interface BookService {
     public boolean delete(Integer id);
 
     /**
-     *
      * @param book
+     * @return
      */
-    public void update(Book book);
+    public boolean update(Book book);
 
     /**
      *
