@@ -32,6 +32,8 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book getById(Integer id) {
+//        //将可能出现的异常进行包装，转换成自定义异常
+//        int i = 1/ 0;
         return bookMapper.getById(id);
     }
 
