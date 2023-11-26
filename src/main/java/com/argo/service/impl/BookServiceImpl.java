@@ -16,18 +16,18 @@ public class BookServiceImpl implements BookService {
     BookMapper bookMapper;
     @Override
     public boolean save(Book book) {
-        return bookMapper.save(book);
+        return bookMapper.save(book) > 0? true: false;
     }
 
     @Override
     public boolean delete(Integer id) {
-        return bookMapper.delete(id);
+        return bookMapper.delete(id) > 0? true: false;
     }
 
     @Override
     public boolean update(Book book) {
 
-        return bookMapper.update(book);
+        return bookMapper.update(book) > 0? true: false;
     }
 
     @Override
